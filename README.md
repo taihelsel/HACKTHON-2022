@@ -13,3 +13,9 @@ In the root directory run :
 2. ```npm run start```
 3. Wait for code to build, then go to localhost:3000 to see the project
 
+
+# Checkout feature branch
+1. ```git checkout -b feature/BRANCH NAME```
+2. Work on feature
+3. Push feature up 
+4. Create PR in Github

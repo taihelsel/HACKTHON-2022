@@ -1,13 +1,12 @@
 import { useState } from "react";
 import "./CreateTicketPage.css";
 import FormInput from "../../Components/FormInput";
-import UploadButton from "./components/UploadButton";
-import GeoLocation from "./components/GeoLocation";
+import { UploadImage, GeoLocation } from "./components";
 
 export default function CreateTicketPage() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [location, setLocation] = useState({ type: "unset", inputValue: "" });
+  const [location, setLocation] = useState({ type: "unset", inputValue: "", coords: {} });
   const [isPending, setIsPending] = useState(false);
   return (
     <section id="CreateTicket">
@@ -35,7 +34,7 @@ export default function CreateTicketPage() {
         <div className="form-input-row">
           <GeoLocation setLocation={setLocation} location={location} />
         </div>
-        <UploadButton />
+        <UploadImage />
       </form>
     </section>
   );

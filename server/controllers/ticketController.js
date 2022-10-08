@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 module.exports.all = (req, res) => {
     // @route  GET /api/tickets/all/
     // @desc   Returns all tickets

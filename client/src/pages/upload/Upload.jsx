@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FormInput from "../../Components/FormInput";
+import "./Upload.css";
 
 function UploadUser() {
   const [name, setName] = useState("");

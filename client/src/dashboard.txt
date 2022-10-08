@@ -1,0 +1,6 @@
+
+logic 
+
+Data
+All tickets stored in database Tickets 
+num of tickets

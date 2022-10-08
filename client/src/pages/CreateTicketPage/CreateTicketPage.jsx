@@ -2,23 +2,13 @@ import { useState } from "react";
 import "./CreateTicketPage.css";
 import FormInput from "../../Components/FormInput";
 import UploadButton from "./components/UploadButton";
+import GeoLocation from "./components/GeoLocation";
 
 export default function CreateTicketPage() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [location, setLocation] = useState("");
-  const [zipcode, setZipcode] = useState("");
+  const [location, setLocation] = useState({ type: "unset", inputValue: "" });
   const [isPending, setIsPending] = useState(false);
-
-  const handleSubmit = () => {
-    // e.preventDefault()
-    const userInfo = {
-      name,
-      phoneNumber,
-      zipcode,
-      location,
-    };
-  };
   return (
     <section id="CreateTicket">
       <h2>City User</h2>
@@ -43,24 +33,7 @@ export default function CreateTicketPage() {
           />
         </div>
         <div className="form-input-row">
-          <FormInput
-            type="text"
-            required
-            value={location}
-            updateState={(e) => setLocation(e.target.value)}
-            id="locationInput"
-            labelText="Location"
-          />
-        </div>
-        <div className="form-input-row">
-          <FormInput
-            type="number"
-            required
-            value={zipcode}
-            updateState={(e) => setZipcode(e.target.value)}
-            id="zipcodeInput"
-            labelText="Zipcode"
-          />
+          <GeoLocation setLocation={setLocation} location={location} />
         </div>
         <UploadButton />
       </form>

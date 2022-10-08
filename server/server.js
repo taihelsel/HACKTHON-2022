@@ -25,6 +25,7 @@ const API_BASE = "/api";
 //routes
 app.use(`${API_BASE}/tickets`, require("./routes/ticketsRoute"));
 app.use(`${API_BASE}/vote`, require("./routes/voteRoute"));
+app.use(`${API_BASE}/report`, require("./routes/reportRoute"));
 //sending build
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "client", "build", "index.html"));

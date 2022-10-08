@@ -1,5 +1,5 @@
 const express = require("express"), router = express.Router();
-const { all, page, remove } = require("../controllers/testController.js");
+const { all, page, remove, add } = require("../controllers/testController.js");
 
 // @route  GET /api/tickets/all/
 // @desc   Returns all tickets
@@ -15,7 +15,12 @@ router.get("/page/:pageNumber", page);
 // @route  DELETE /api/tickets/remove/
 // @desc   Removes ticket from db
 // @access Public
-router.get("/remove/", remove);
+router.delete("/remove", remove);
+
+// @route  POST /api/tickets/add/
+// @desc   Adds ticket to db
+// @access Public
+router.post("/add", add);
 
 
 module.exports = router;

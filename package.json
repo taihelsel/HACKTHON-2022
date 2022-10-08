@@ -1,0 +1,25 @@
+{
+  "name": "hackathon-2022",
+  "version": "1.0.0",
+  "description": "Hackathon 2022",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd ./client && npm install && cd ../server && npm install",
+    "lint": "cd ./client && npm run lint && cd ../server && npm run lint",
+    "pre": "npm run lint && git add .",
+    "start": "cd ./client && npm run build && cd ../server && npm run start",
+    "server": "cd ./server && npm run start",
+    "client": "cd ./client && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taihelsel/HACKTHON-2022.git"
+  },
+  "keywords": [],
+  "author": "taihelsel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taihelsel/HACKTHON-2022/issues"
+  },
+  "homepage": "https://github.com/taihelsel/HACKTHON-2022#readme"
+}

@@ -16,14 +16,14 @@ app.use(express.static(path.resolve(__dirname, "..", "client", "build")));
 app.use(require("morgan")("dev"));
 
 app.use(session({
-    secret: "keyboard cat",
+    secret: "very secret very safe",
     resave: false,
     saveUninitialized: false,
 }));
 
 const API_BASE = "/api";
 //routes
-app.use(`${API_BASE}/test`, require("./routes/testRoute"));
+app.use(`${API_BASE}/tickets`, require("./routes/ticketsRoute"));
 //sending build
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "client", "build", "index.html"));

@@ -5,19 +5,21 @@ import FormInput from "../../../Components/FormInput";
 export default function GeoLocation({ setLocation, location }) {
   const [browserLocation, setBrowserLocation] = useState(null);
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((pos) => {
-        setBrowserLocation(true);
-        setLocation({
-          coords: {
-            long: pos.coords.longitude,
-            lat: pos.coords.latitude,
-          },
-          type: "geo",
-        });
-      }, (error) => {
-        if (error.code === error.PERMISSION_DENIED) { setBrowserLocation(false); }
+    const gotGeolocation = (pos) => {
+      setBrowserLocation(true);
+      setLocation({
+        coords: {
+          long: pos.coords.longitude,
+          lat: pos.coords.latitude,
+        },
+        type: "geo",
       });
+    };
+    const unableToGetGeolocation = (error) => {
+      if (error.code === error.PERMISSION_DENIED) setBrowserLocation(false);
+    };
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(gotGeolocation, unableToGetGeolocation);
     } else {
       setBrowserLocation(false);
     }

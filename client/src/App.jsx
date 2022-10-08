@@ -1,5 +1,6 @@
 import "./App.css";
 import { testRoute } from "./API/index";
+import UploadUser from "./pages/upload/Upload";
 
 function App() {
   testRoute((msg) => {
@@ -8,6 +9,10 @@ function App() {
   return (
     <div className="App">
       Hello world
+      <div />
+      <div>
+        <UploadUser />
+      </div>
     </div>
   );
 }

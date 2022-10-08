@@ -1,3 +1,6 @@
+import 
+
 export default function HeatMap() {
-  return <h2>This is the HeatMap</h2>;
+  return <><div>this is the HeatMap</div>
+  </>
 }

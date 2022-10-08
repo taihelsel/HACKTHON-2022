@@ -1,4 +1,5 @@
 import { useState } from "react";
+import UploadButton from "./component/UploadButton";
 import FormInput from "../../Components/FormInput";
 import "./Upload.css";
 
@@ -7,7 +8,6 @@ function UploadUser() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
   const [zipcode, setZipcode] = useState("");
-  const [isPending, setIsPending] = useState(false);
 
   const handleSubmit = () => {
     // e.preventDefault()
@@ -18,18 +18,17 @@ function UploadUser() {
       location,
     };
 
-    setIsPending(true);
-
     fetch("http://localhost:3000", {
       method: "POST",
       headers: { "Content Type": "application/json" },
       body: JSON.stringify(userInfo),
     }).then(() => {
       console.log("new user added");
-      setIsPending(false);
     });
   };
-
+  const uploadImage = (img) => {
+    console.log("Upload image", img);
+  };
   return (
     <div className="create-user">
       <h2>City User</h2>
@@ -65,12 +64,18 @@ function UploadUser() {
           id="zipcodeInput"
           labelText="Zipcode"
         />
-        {!isPending && <button type="button">Submit</button>}
-        {isPending && (
+        {/* {!isPending && (
+          <button onClick={() => alert("clicked")} type="button">
+            Submit
+          </button>
+        )} */}
+
+        {/* {isPending && (
           <button type="button" disabled>
             Submitting
           </button>
-        )}
+        )} */}
+        <UploadButton uploadImage={uploadImage} />
         <p>{name}</p>
         <p>{phoneNumber}</p>
         <p>{zipcode}</p>

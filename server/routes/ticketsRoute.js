@@ -1,11 +1,10 @@
 const express = require("express"), router = express.Router();
-const { all, page, remove, add } = require("../controllers/ticketController.js");
+const { all, page, remove, add } = require("../controllers/ticketsController.js");
 
 // @route  GET /api/tickets/all/
 // @desc   Returns all tickets
 // @access Public
 router.get("/all", all);
-
 
 // @route  GET /api/tickets/page/:pageNumber
 // @desc   Returns limited number of tickets by page.

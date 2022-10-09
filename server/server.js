@@ -4,9 +4,17 @@ const express = require("express");
 const path = require("path");
 const session = require("express-session");
 const app = express();
-
-//config
+const admin = require("firebase-admin");
+const serviceAccount = require("./firebase-config.json");
 const port = 3000;
+
+// Initialize the app with a service account, granting admin privileges
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    // The database URL depends on the location of the database
+    databaseURL: "https://ticketnfixit.firebaseio.com"
+});
+
 //middleware
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }));

@@ -7,7 +7,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>Navbar Placeholder</h1>
         <Routes>
           <Route path="/" element={<CreateTicketPage />} />
           <Route path="/heatmap" element={<HeatMapPage />} />

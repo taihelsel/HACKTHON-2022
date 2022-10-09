@@ -7,11 +7,18 @@ import { addressToGeo } from "../../API";
 export default function CreateTicketPage() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [location, setLocation] = useState({ type: "unset", inputValue: "", coords: {} });
+  const [complaint, setComplaint] = useState("");
+  const [location, setLocation] = useState({
+    type: "unset",
+    inputValue: "",
+    coords: {},
+  });
   const submitTicket = () => {
     let { coords } = location;
     if (location.type !== "geo") {
-      addressToGeo(({ lat, long }) => { coords = { lat, long }; });
+      addressToGeo(({ lat, long }) => {
+        coords = { lat, long };
+      });
     }
   };
   return (
@@ -51,7 +58,9 @@ export default function CreateTicketPage() {
           />
         </div>
         <UploadImage />
-        <button type="button" id="create-ticket-button" onClick={submitTicket}>Create Ticket</button>
+        <button type="button" id="create-ticket-button" onClick={submitTicket}>
+          Create Ticket
+        </button>
       </form>
     </section>
   );

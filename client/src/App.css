@@ -37,4 +37,28 @@
   }
 }
 
+/* #CreateTicket {
+  background: #0F9D58
+} */
 
+* {
+  margin: 0;
+  font-family: 'Quicksand';
+  color: #333;
+}
+
+#create-ticket-form {
+  width: 300px;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+#CreateTicket > form > div.form-input-row-location > div > div > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px;
+}

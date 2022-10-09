@@ -1,6 +1,8 @@
 import "../HeatMapPage.css";
+/* eslint-disable*/
 import React, { useRef, useEffect, useState } from "react";
-import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from "!mapbox-gl";
+
 export default function HeatMap() {
   mapboxgl.accessToken =
     "pk.eyJ1Ijoiam9zaGJlbnBoaWxpcCIsImEiOiJjbDkwNnZxMzMwd201M3ZwOHBhdHhuMTh6In0.G5QStu3kuENYWaEJmoSfbw";
@@ -107,6 +109,7 @@ export default function HeatMap() {
       },
     ];
   };
+
   const buildData = () => {
     const data = fetchTickets();
     const geojsonData = data.map(({ score, coords }) => {

@@ -1,5 +1,6 @@
-import "../App.css";
-import fakeData from "../fakeData";
+import "../../../App.css";
+import fakeData from "./fakeData";
+/* eslint-disable*/
 
 export default function TopTickets() {
   const picture =

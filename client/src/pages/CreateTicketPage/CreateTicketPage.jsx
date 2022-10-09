@@ -40,6 +40,16 @@ export default function CreateTicketPage() {
         <div className="form-input-row">
           <GeoLocation setLocation={setLocation} location={location} />
         </div>
+        <div className="form-input-row">
+          <FormInput
+            type="text"
+            value={complaint}
+            updateState={(e) => setName(e.target.value)}
+            id="complaintInput"
+            labelText="complaint"
+            required
+          />
+        </div>
         <UploadImage />
         <button type="button" id="create-ticket-button" onClick={submitTicket}>Create Ticket</button>
       </form>

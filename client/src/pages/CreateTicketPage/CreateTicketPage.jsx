@@ -10,7 +10,7 @@ export default function CreateTicketPage() {
   const [isPending, setIsPending] = useState(false);
   return (
     <section id="CreateTicket">
-      <h2>City User</h2>
+      <h2>City Uuuser</h2>
       <form className="create-ticket-form">
         <div className="form-input-row">
           <FormInput

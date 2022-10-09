@@ -64,13 +64,13 @@
   display: block;
 }
 
-.user h2 {
+.create-user h2 {
   font-size: 22px;
   color: #f1356d;
   margin-bottom: 30px;
 }
 
-.user input {
+.create-user input {
     width: 300px;
     padding: 6px 10px;
     margin: 10px 0;
@@ -79,7 +79,7 @@
     display: block;
 }
 
-.user button {
+.create-user button {
   background: #f1356d;
   color: #fff;
   border: 0;

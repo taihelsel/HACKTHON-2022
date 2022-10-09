@@ -26,6 +26,15 @@ export default function TopTickets() {
         </div>
         <img className="pic" src={picture} alt="pothole" />
       </div>
+      <div className="ticket">
+        <div>
+          <h2>{fakeData()[0].id3.subject}</h2>
+          <p>{fakeData()[0].id3.description}</p>
+          <p>{fakeData()[0].id3.score} upvotes</p>
+          <p>{fakeData()[0].id3.coords}</p>
+        </div>
+        <img className="pic" src={picture} alt="pothole" />
+      </div>
     </div>
   );
 }

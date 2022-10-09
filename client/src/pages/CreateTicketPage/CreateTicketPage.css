@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* base styles  */
 
 * {
   margin: 0;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   color: #333;
 }
 .navbar {
@@ -43,7 +43,7 @@
   border-bottom: 1px solid #fafafa;
 }
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(red, green, blue, alpha)
+  box-shadow: 1px 3px 5px rgba(red, green, blue, alpha);
 }
 .blog-preview h2 {
   font-size: 20px;
@@ -71,12 +71,12 @@
 }
 
 .user input {
-    width: 300px;
-    padding: 6px 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: block;
+  width: 300px;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
 }
 
 .user button {
@@ -86,4 +86,8 @@
   padding: 9px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+#createTicket {
+  background-color: #77ad30;
 }

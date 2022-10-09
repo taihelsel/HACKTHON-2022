@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#createTicket {
+  background-color: #77ad30;
+}

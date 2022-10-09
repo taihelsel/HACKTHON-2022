@@ -6,11 +6,14 @@ import { UploadImage, GeoLocation } from "./components";
 export default function CreateTicketPage() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [location, setLocation] = useState({ type: "unset", inputValue: "", coords: {} });
+  const [location, setLocation] = useState({
+    type: "unset",
+    inputValue: "",
+    coords: {},
+  });
   const [isPending, setIsPending] = useState(false);
   return (
     <section id="CreateTicket">
-      <h2>City User</h2>
       <form className="create-ticket-form">
         <div className="form-input-row">
           <FormInput

@@ -103,7 +103,7 @@ module.exports.add = async (req, res) => {
         const tickets =  db.collection("Ticket");
         await tickets.doc().set({
             descriptions: desc,
-            location: new admin.firestore.GeoPoint(coords.latitude, coords.longitude),
+            location: new admin.firestore.GeoPoint(coords.lat, coords.long),
             picture:imageURL,
             upvotes: Math.floor(Math.random() * 1500),
             reports:0,

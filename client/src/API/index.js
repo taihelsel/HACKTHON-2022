@@ -1,6 +1,6 @@
-import testRoute from "./testRoute";
+import addressToGeo from "./addressToGeo";
 
 export {
   // eslint-disable-next-line import/prefer-default-export
-  testRoute,
+  addressToGeo,
 };

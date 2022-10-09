@@ -2,12 +2,18 @@ import { useState } from "react";
 import "./CreateTicketPage.css";
 import FormInput from "../../Components/FormInput";
 import { UploadImage, GeoLocation } from "./components";
+import { addressToGeo } from "../../API";
 
 export default function CreateTicketPage() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState({ type: "unset", inputValue: "", coords: {} });
-  const [isPending, setIsPending] = useState(false);
+  const submitTicket = () => {
+    let { coords } = location;
+    if (location.type !== "geo") {
+      addressToGeo(({ lat, long }) => { coords = { lat, long }; });
+    }
+  };
   return (
     <section id="CreateTicket">
       <h2>City User</h2>
@@ -35,6 +41,7 @@ export default function CreateTicketPage() {
           <GeoLocation setLocation={setLocation} location={location} />
         </div>
         <UploadImage />
+        <button type="button" id="create-ticket-button" onClick={submitTicket}>Create Ticket</button>
       </form>
     </section>
   );

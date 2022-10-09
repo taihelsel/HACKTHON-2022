@@ -37,13 +37,14 @@ export default function GeoLocation({ setLocation, location }) {
         Unable to get device location.
         <br />
         Please enter your current location
+        <div className="form-input-row">Location</div>
         <FormInput
           type="text"
           required
           value={location.inputValue}
           updateState={(e) => setLocation({ type: "input", inputValue: e.target.value })}
           id="locationInput"
-          labelText="Location"
+          // labelText="Location"
         />
       </div>
     );

@@ -53,24 +53,28 @@
 
 /* user imput */
 
-.create-user {
+#CreateTicket {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
 
-.create-user label {
+#CreateTicket label {
   text-align: left;
   display: block;
 }
 
-.user h2 {
-  font-size: 22px;
-  color: #f1356d;
+#CreateTicket h2 {
+  font-size: 30px;
+  /* color: #f1356d; */
+  background-color: #0F9D58;
   margin-bottom: 30px;
 }
 
-.user input {
+.form-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 300px;
     padding: 6px 10px;
     margin: 10px 0;
@@ -87,3 +91,27 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.create-ticket-form {
+    width: 300px;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+#CreateTicket {
+  background-color: wheat;
+}
+
+.create-ticket-form {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+/* .form-input-row {
+  display: flex;
+  justify-content: center;
+} */

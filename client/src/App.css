@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* #CreateTicket {
+  background: #0F9D58
+} */
+
+* {
+  margin: 0;
+  font-family: 'Quicksand';
+  color: #333;
+}
+
+#create-ticket-form {
+  width: 300px;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}

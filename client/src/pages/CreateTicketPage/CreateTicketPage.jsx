@@ -12,23 +12,25 @@ export default function CreateTicketPage() {
     <section id="CreateTicket">
       <h2>City User</h2>
       <form className="create-ticket-form">
+        <div className="form-input-row">Name</div>
         <div className="form-input-row">
           <FormInput
             type="text"
             value={name}
             updateState={(e) => setName(e.target.value)}
             id="nameInput"
-            labelText="Name"
+            // labelText="Name"
             required
           />
         </div>
+        <div className="form-input-row">Phone Number</div>
         <div className="form-input-row">
           <FormInput
             type="number"
             value={phoneNumber}
             updateState={(e) => setPhoneNumber(e.target.value)}
             id="phoneInput"
-            labelText="Phone Number"
+            // labelText="Phone Number"
           />
         </div>
         <div className="form-input-row">

@@ -32,7 +32,7 @@ function WebCam({ handleFail }) {
 WebCam.propTypes = {
   handleFail: PropTypes.func.isRequired,
 };
-function AccessFilesPrompt() {
+function AccessFilesPrompt({ handleSetImage }) {
   return (
     <input
       type="file"
@@ -42,6 +42,9 @@ function AccessFilesPrompt() {
     />
   );
 }
+AccessFilesPrompt.propTypes = {
+  handleSetImage: PropTypes.func.isRequired,
+};
 export default function UploadImage() {
   return (
     <AccessFilesPrompt />

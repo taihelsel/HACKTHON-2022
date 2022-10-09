@@ -3,16 +3,25 @@ import "./CreateTicketPage.css";
 import FormInput from "../../Components/FormInput";
 import { UploadImage, GeoLocation } from "./components";
 import { addressToGeo } from "../../API";
+import uploadImage from "../../API/uploadImage";
 
 export default function CreateTicketPage() {
   const [name, setName] = useState("");
+  const [complaint, setComplaint] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [imgData, setImgData] = useState("");
   const [location, setLocation] = useState({ type: "unset", inputValue: "", coords: {} });
   const submitTicket = () => {
     let { coords } = location;
     if (location.type !== "geo") {
       addressToGeo(({ lat, long }) => { coords = { lat, long }; });
     }
+    // uploadImage(imgData, (imgURL) => {
+    //   console.log(imgURL);
+    // });
+  };
+  const handleSetImage = (e) => {
+    console.log("Set img", e);
   };
   return (
     <section id="CreateTicket">
@@ -50,7 +59,7 @@ export default function CreateTicketPage() {
             required
           />
         </div>
-        <UploadImage />
+        <UploadImage handleSetImage={handleSetImage} />
         <button type="button" id="create-ticket-button" onClick={submitTicket}>Create Ticket</button>
       </form>
     </section>

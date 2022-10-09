@@ -91,3 +91,8 @@
 #createTicket {
   background-color: #77ad30;
 }
+
+.form-input-row {
+  display: flex;
+  justify-content: center;
+}

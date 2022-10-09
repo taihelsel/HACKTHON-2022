@@ -37,7 +37,7 @@ export default function GeoLocation({ setLocation, location }) {
         Unable to get device location.
         <br />
         Please enter your current location
-        <div className="form-input-row">Location</div>
+        <div className="form-input-row"><h1>Location</h1></div>
         <FormInput
           type="text"
           required

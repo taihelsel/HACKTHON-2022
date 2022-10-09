@@ -12,7 +12,7 @@ export default function CreateTicketPage() {
     <section id="CreateTicket">
       <h2>City User</h2>
       <form className="create-ticket-form">
-        <div className="form-input-row">Name</div>
+        <div className="form-input-row"><h1>Name</h1></div>
         <div className="form-input-row">
           <FormInput
             type="text"
@@ -23,17 +23,17 @@ export default function CreateTicketPage() {
             required
           />
         </div>
-        <div className="form-input-row">Phone Number</div>
+        <div className="form-input-row"><h1>Description</h1></div>
         <div className="form-input-row">
           <FormInput
-            type="number"
+            type="text"
             value={phoneNumber}
             updateState={(e) => setPhoneNumber(e.target.value)}
-            id="phoneInput"
+            id="DescriptionInput"
             // labelText="Phone Number"
           />
         </div>
-        <div className="form-input-row">
+        <div className="form-input-row-location">
           <GeoLocation setLocation={setLocation} location={location} />
         </div>
         <UploadImage />

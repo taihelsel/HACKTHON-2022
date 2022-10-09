@@ -2,3 +2,5 @@
 /node_modules/*
 /server/*
 /public/*
+./src/service-worker.js
+./src/serviceWorkerRegistration.js

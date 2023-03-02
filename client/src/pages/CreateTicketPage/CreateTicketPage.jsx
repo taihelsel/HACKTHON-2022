@@ -19,7 +19,6 @@ export default function CreateTicketPage() {
             value={name}
             updateState={(e) => setName(e.target.value)}
             id="nameInput"
-            // labelText="Name"
             required
           />
         </div>
@@ -30,7 +29,6 @@ export default function CreateTicketPage() {
             value={phoneNumber}
             updateState={(e) => setPhoneNumber(e.target.value)}
             id="DescriptionInput"
-            // labelText="Phone Number"
           />
         </div>
         <div className="form-input-row-location">
